@@ -19,7 +19,7 @@ var incorrectLetter = [];
 //console.log(yourWord.underscore());
 
 function doWord () {
-    var randomWord = wordBank[Math.floor(Math.random() * wordBank.length)];
+    let randomWord = wordBank[Math.floor(Math.random() * wordBank.length)];
        if (guess.indexOf(randomWord) === -1) {
            guess.push(randomWord);
            return randomWord;

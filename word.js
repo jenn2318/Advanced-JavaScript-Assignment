@@ -17,7 +17,7 @@ function Word () {
       // console.log(this.chosenWord[i]);
       this.letterObjectArray.push(new letter (this.chosenWord[i]));
       
-    }
+    7}
     console.log(this.letterObjectArray);
     console.log(this.letterObjectArray[2].letterChecker('a'));
 

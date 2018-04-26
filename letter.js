@@ -2,8 +2,8 @@
 function Letter (word) {
     this.letter = word;
     this.letterGuessed = false;
-    //
-    console.log(this.letter);
+    
+    //console.log(this.letter);
     this.characterDisplay = function (){
         if (this.letter === true){
             return this.character;
