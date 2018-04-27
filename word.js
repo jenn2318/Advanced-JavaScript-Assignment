@@ -15,10 +15,9 @@ function Word () {
       //  let letterChosen = new Letter(answer[i]);
        // this.letterObjectArray.push(letter);
       // console.log(this.chosenWord[i]);
-      this.letterObjectArray.push(new letter (this.chosenWord[i]));
-      
-    7}
-    console.log(this.letterObjectArray);
+      this.letterObjectArray.push(new letter(this.chosenWord[i]));
+    }
+    // console.log(this.letterObjectArray);
     console.log(this.letterObjectArray[2].letterChecker('a'));
 
     this.print = function () {
@@ -26,7 +25,7 @@ function Word () {
         for (let i = 0; this.letterObjectArray.length; i++) {
             printWord += this.letterObjectArray[i] + '';
         }
-        console.log(printWord + "\n");
+        // console.log(printWord + "\n");
     }
 
     this.userChoice = function (input) {
