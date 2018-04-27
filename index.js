@@ -20,13 +20,13 @@ var underScore = [];
 //console.log(chosen);
 //console.log(yourWord.underscore());
 
-function doWord () {
+function getWord () {
     let randomWord = wordBank[Math.floor(Math.random() * wordBank.length)];
        if (guess.indexOf(randomWord) === -1) {
            guess.push(randomWord);
            return randomWord;
        } else {
-           doWord ();
+           getWord ();
        }
 }
 
