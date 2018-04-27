@@ -13,6 +13,8 @@ let Word = require('./word.js')
 var correctLetters = [];
 var incorrectLetter = [];
 
+var underScore = [];
+
 //puts chosen word into the constructor
 //var yourWord = new Letter(chosen);
 //console.log(chosen);
@@ -27,6 +29,19 @@ function doWord () {
            doWord ();
        }
 }
+
+function underScores (){
+    underScore = [];
+    for (var i = 0; i < randomWord.length; i++) {
+        underScore.push ('_');
+    }
+}
+
+//function goodGuess(ltr){
+  //  underScore[randomWord.indexOf(this.letter)] = ltr;
+    //console.log(underScore);
+  //}
+      
 
 function prompt () {
     inquirer.prompt([
