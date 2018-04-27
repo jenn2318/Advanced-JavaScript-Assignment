@@ -4,10 +4,7 @@ let inquirer = require('inquirer');
 let Word = require('./word.js')
 //console.log(Letter);
 
-//var wordBank = ['Wonder Woman', 'Poison Ivy', 'Storm', 'Cat Woman', 'Carol Danvers', 'Gamora', 'Rogue'];
-//choose random word for the game
-//var chosenWord = wordBank[Math.floor(Math.random() * wordBank.length)];
-//console.log(chosen);
+
 
 //You need an array for guessed correct and incorrect letters
 var correctLetters = [];
@@ -15,10 +12,6 @@ var incorrectLetter = [];
 
 var underScore = [];
 
-//puts chosen word into the constructor
-//var yourWord = new Letter(chosen);
-//console.log(chosen);
-//console.log(yourWord.underscore());
 
 function getWord () {
     let randomWord = wordBank[Math.floor(Math.random() * wordBank.length)];
@@ -37,10 +30,10 @@ function underScores (){
     }
 }
 
-//function goodGuess(ltr){
-  //  underScore[randomWord.indexOf(this.letter)] = ltr;
-    //console.log(underScore);
-  //}
+function goodGuess(ltr){
+  underScore[randomWord.indexOf(Letter.prototype.characterDisplay)] = ltr;
+    console.log(underScore);
+}
       
 
 function prompt () {
@@ -61,4 +54,6 @@ startGame();
 function startGame () {
     let word = new Word ();
     prompt();
+    underScores();
+    getWord();
 }
