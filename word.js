@@ -2,7 +2,7 @@ let letter = require('./letter.js')
 let wordBank = ['Wonder Woman', 'Poison Ivy', 'Storm', 'Cat Woman', 'Carol Danvers', 'Gamora', 'Rogue'];
 
 function Word () {
-    this.letterObjectArray = ['A','B','C','D','E','F','G';
+    this.letterObjectArray = ['A','B','C','D','E','F','G','H','R','S','T','U','V','W','X','Y','Z'];
     this.chosenWord = wordBank[Math.floor(Math.random() * wordBank.length)];
 
     for (let i = 0; i < this.wordBank.length; i++) {
