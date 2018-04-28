@@ -2,11 +2,11 @@ let letter = require('./letter.js')
 let wordBank = ['Wonder Woman', 'Poison Ivy', 'Storm', 'Cat Woman', 'Carol Danvers', 'Gamora', 'Rogue'];
 
 function Word () {
-    this.letterObjectArray = [];
+    this.letterObjectArray = ['A','B','C','D','E','F','G';
     this.chosenWord = wordBank[Math.floor(Math.random() * wordBank.length)];
 
-    for (let i = 0; i < this.chosenWord.length; i++) {
-        let temp = new letter(this.chosenWord[i]);
+    for (let i = 0; i < this.wordBank.length; i++) {
+        let temp = new letter(this.letterObjectArray[i]);
         this.letterObjectArray.push(temp);
     }
     console.log('test letterCheck', this.letterObjectArray[2].letterChecker('a'));
@@ -26,3 +26,4 @@ Word.prototype.userChoice = function(input) {
 }
 
 module.exports = Word;
+

@@ -5,55 +5,68 @@ let Word = require('./word.js')
 //console.log(Letter);
 
 
+let wordBank = ['Wonder Woman', 'Poison Ivy', 'Storm', 'Cat Woman', 'Carol Danvers', 'Gamora', 'Rogue'];
 
+//this.chosenWord = wordBank[Math.floor(Math.random() * wordBank.length)];
 //You need an array for guessed correct and incorrect letters
-var correctLetters = [];
-var incorrectLetter = [];
-
-var underScore = [];
+let correctLetters = [];
+let incorrectLetter = [];
 
 
-function getWord () {
-    let randomWord = wordBank[Math.floor(Math.random() * wordBank.length)];
-       if (guess.indexOf(randomWord) === -1) {
-           guess.push(randomWord);
-           return randomWord;
-       } else {
-           getWord ();
-       }
-}
+//for underscores to appear will be used in a function
+let underScore = "_"
 
-function underScores (){
-    underScore = [];
-    for (var i = 0; i < randomWord.length; i++) {
-        underScore.push ('_');
-    }
-}
 
-function goodGuess(ltr){
-  underScore[randomWord.indexOf(Letter.prototype.characterDisplay)] = ltr;
-    console.log(underScore);
-}
-      
+// Guesses user has in the game
+let guessesLeft = 5;
 
-function prompt () {
-    inquirer.prompt([
-        {
-            type: 'input',
-            message: 'Guess a letter',
-            name: 'letterGuess'
-        }
-    ]).then(answers => {
-        console.log(answers);
-    })
-}
+//randomly selects a word and uses a constructor to store it
+// function playGame() {
+// let wordChoice = new Word(chosenWord);
+// Word.underScoreMake();
+// }
 
-//prompt();
-startGame();
+//This is to grab a random word
+// function grabRandomWord() {
+//     let rand = wordBank[Math.floor(Math.random() * wordBank.length)];
+//     let randomSelection = wordBank[rand];
+//     if(chosenWord.indexOf(randomWord) === -1) {
+//       return randomWord;
+//     } else {
+//     grabRandomWord()
+//     gameGuessing();
+//     playGame();
+//     }
+//   }
 
-function startGame () {
-    let word = new Word ();
-    prompt();
-    underScores();
-    getWord();
-}
+// function gameGuessing (){
+//   if (guessesLeft = 5) {
+//         inquirer.prompt([
+//             {
+//                 type: "input",
+//                message: 'Guess a letter:',
+//               name: "guess"
+//            }
+//     ]).then(function(answer){
+//            letterValidate = this.letterChecker(guess);
+//         if (guessesLeft === 0) {
+               //console.log('');
+//                 console.log("Youre guesses were incorrect" + ansewer.guessedLetter + "Try Again!");
+//                 guessesLeft--;
+//             } else {
+//         console.log(this.letterChecker);
+            
+//             if (guesses > 0 && correct) {
+//                 letterValidate = this.letterChecker(guess);
+//                //console.log('');
+//                 console.log("Your guess is correct"+ answer.guessesLetter + "Good Job!");
+//                 inquire();
+//             } else {
+//                console.log("GuessesLeft" + guessesLeft);      
+               
+//         } console.log(answers);
+//          inquirer();
+//     }
+    
+//  });
+
